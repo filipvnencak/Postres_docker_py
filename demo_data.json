@@ -1,0 +1,3260 @@
+{
+  "frinx-uniconfig-topology:configuration": {
+    "Cisco-IOS-XR-infra-policymgr-cfg:policy-manager": {
+      "policy-maps": {
+        "policy-map": [
+          {
+            "type": "qos",
+            "name": "PM-OUT-INTERFACE-1GE-METRO",
+            "policy-map-rule": [
+              {
+                "class-name": "CLASS1",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 230000,
+                  "unit": "kbps"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM-CHILD-WRED-1GE"
+                }
+              },
+              {
+                "class-name": "CLASS2",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 230000,
+                  "unit": "kbps"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM-CHILD-WRED-1GE"
+                }
+              },
+              {
+                "class-name": "CLASS3",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 50000,
+                  "unit": "kbps"
+                }
+              },
+              {
+                "class-name": "CLASS4",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 50000,
+                  "unit": "kbps"
+                }
+              },
+              {
+                "class-name": "CLASS5",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 100000,
+                  "unit": "kbps"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM-CHILD-LLQ-1GE"
+                }
+              },
+              {
+                "class-name": "CLASS6",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 30000,
+                  "unit": "kbps"
+                }
+              },
+              {
+                "class-name": "CLASS7",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 30000,
+                  "unit": "kbps"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "min-bandwidth": {
+                  "value": 230000,
+                  "unit": "kbps"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM-CHILD-WRED-1GE"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-Med-Edge-15Mb-Entry",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 15000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 1,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-Med-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-High-Edge-50Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 50000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-RT-High-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-Low-Edge"
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_8Mb_RT_HIGH_3",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "min-bandwidth": {
+                  "value": 8000000,
+                  "unit": "bps"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM_OUT_B2B_RT_HIGH_3"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-43Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 43000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-None-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-Low-Edge-25Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 25000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-RT-Low-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-11Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 11000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-None-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-6Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 6000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-None-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-Med-Edge-300Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 300000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-RT-Med-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_RT_HIGH_3",
+            "policy-map-rule": [
+              {
+                "class-name": "CM_B2B_MANAGEMENT_OUT",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 6
+                }
+              },
+              {
+                "class-name": "CM_B2B_PLATINUM_OUT",
+                "class-type": "qos",
+                "priority-level": 1,
+                "set": {
+                  "inner-cos": 5
+                },
+                "police": {
+                  "rate": {
+                    "value": 50,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "CM_B2B_GOLD_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 50,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_SILVER_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 20,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_BRONZE_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "set": {
+                  "inner-cos": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-Core",
+            "policy-map-rule": [
+              {
+                "class-name": "Core-Platinum",
+                "class-type": "qos",
+                "priority-level": 1,
+                "police": {
+                  "rate": {
+                    "value": 50,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "Core-Control",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                }
+              },
+              {
+                "class-name": "Core-Business",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 3,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 9,
+                    "threshold-max-units": "ms"
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 80,
+                  "unit": "percent"
+                }
+              },
+              {
+                "class-name": "Core-Signalling",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 8,
+                  "unit": "percent"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-High-Edge",
+            "policy-map-rule": [
+              {
+                "class-name": "Edge-Control",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 64,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Gold",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 70,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Silver",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                }
+              },
+              {
+                "class-name": "Edge-Bronze",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "queue-limit": {
+                  "value": 512,
+                  "unit": "packets"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-High-Edge-20Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 20000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-High-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_200Mb_RT_HIGH",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 200,
+                    "unit": "mbps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM_OUT_B2B_RT_HIGH"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_NRT_HIGH_ENTRY",
+            "policy-map-rule": [
+              {
+                "class-name": "CM_B2B_MANAGEMENT_OUT",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 6
+                }
+              },
+              {
+                "class-name": "CM_B2B_GOLD_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 15,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 25,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af31",
+                      "af32",
+                      "af33",
+                      "cs3",
+                      "af41",
+                      "af42",
+                      "af43",
+                      "cs4"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 70,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 1
+                }
+              },
+              {
+                "class-name": "CM_B2B_SILVER_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 15,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 25,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af21",
+                      "af22",
+                      "af23",
+                      "cs2"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 1
+                }
+              },
+              {
+                "class-name": "CM_B2B_BRONZE_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 15,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 25,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af11",
+                      "af12",
+                      "af13",
+                      "cs1"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 1
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 25,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 50,
+                    "threshold-max-units": "ms"
+                  }
+                ],
+                "set": {
+                  "inner-cos": 1
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_IN_EVPN_ASSURED",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "set": {
+                  "cos": 2,
+                  "mpls-experimental-imposition": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_RT_HIGH_4",
+            "policy-map-rule": [
+              {
+                "class-name": "CM_B2B_MANAGEMENT_OUT",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 6
+                }
+              },
+              {
+                "class-name": "CM_B2B_PLATINUM_OUT",
+                "class-type": "qos",
+                "priority-level": 1,
+                "set": {
+                  "inner-cos": 5
+                },
+                "police": {
+                  "rate": {
+                    "value": 50,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "CM_B2B_GOLD_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 50,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_SILVER_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 20,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_BRONZE_OUT",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "set": {
+                  "inner-cos": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-High-Edge-1000Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 1000000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-RT-High-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "VZ_IPVPN_1000Mb_IN",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 1,
+                    "units": "gbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "Transmit": [
+                      null
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_RT_HIGH"
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-3Mb-Entry",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 3000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 1,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-None-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_CI_POLICE_100M",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 100,
+                    "units": "mbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "cos": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_IN_EVPN_POLICE_300M",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 300,
+                    "units": "mbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "cos": 2,
+                      "mpls-experimental-top-most": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM-CEN-EVPN-PROTECT-1GBPS-OUT",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 1,
+                    "units": "gbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "cos": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_1Mb_RT_HIGH",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 8,
+                    "unit": "mbps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 1,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "PM_OUT_B2B_RT_HIGH-100"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "OutputPolicy-xG",
+            "policy-map-rule": [
+              {
+                "class-name": "Premium",
+                "class-type": "qos",
+                "priority-level": 1,
+                "police": {
+                  "rate": {
+                    "value": 40,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "NetControl",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "percent"
+                }
+              },
+              {
+                "class-name": "Aggregate",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 5,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 10,
+                    "threshold-max-units": "ms",
+                    "mpls-exp": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "threshold-min-value": 10,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 100,
+                    "threshold-max-units": "ms",
+                    "mpls-exp": [
+                      3,
+                      4
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 90,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 100,
+                  "unit": "ms"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 40,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 200,
+                    "threshold-max-units": "ms",
+                    "mpls-exp": [
+                      0
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 200,
+                  "unit": "ms"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM-CI-L3-INT-PROTECT-10GBPS-OUT",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 10,
+                    "units": "gbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "cos": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_IN_B2B_PREMIUM",
+            "policy-map-rule": [
+              {
+                "class-name": "CM_B2B_SYNC_IN",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 7
+                }
+              },
+              {
+                "class-name": "CM_B2B_MGMT_IN",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 6
+                }
+              },
+              {
+                "class-name": "CM_B2B_PREMIUM_IN",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 5
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM-CHILD-WRED-1GE",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-2.3Mb-Entry",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 2300000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 1,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-NRT-None-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-NRT-None-Edge-Khadar"
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-Voice-Edge",
+            "policy-map-rule": [
+              {
+                "class-name": "Edge-Platinum",
+                "class-type": "qos",
+                "priority-level": 1,
+                "police": {
+                  "rate": {
+                    "value": 90,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "Edge-Control",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 64,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Gold",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 70,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "queue-limit": {
+                  "value": 512,
+                  "unit": "packets"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "VZ_IPVPN_1000Mb_OUT",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 1,
+                    "units": "gbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "Transmit": [
+                      null
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_B2B_RT_HIGH-100",
+            "policy-map-rule": [
+              {
+                "class-name": "CM_B2B_MANAGEMENT_OUT",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 6
+                }
+              },
+              {
+                "class-name": "CM_B2B_PLATINUM_OUT",
+                "class-type": "qos",
+                "priority-level": 1,
+                "set": {
+                  "inner-cos": 5
+                },
+                "police": {
+                  "rate": {
+                    "value": 50,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "CM_B2B_GOLD_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 100,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 200,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af31",
+                      "af32",
+                      "af33",
+                      "cs3",
+                      "af41",
+                      "af42",
+                      "af43",
+                      "cs4"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 50,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_SILVER_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 100,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 200,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af21",
+                      "af22",
+                      "af23",
+                      "cs2"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 20,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "CM_B2B_BRONZE_OUT",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 100,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 200,
+                    "threshold-max-units": "ms",
+                    "dscp": [
+                      "af21",
+                      "af22",
+                      "af23",
+                      "cs2"
+                    ]
+                  }
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                },
+                "set": {
+                  "inner-cos": 2
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "random-detect": [
+                  {
+                    "threshold-min-value": 100,
+                    "threshold-min-units": "ms",
+                    "threshold-max-value": 200,
+                    "threshold-max-units": "ms"
+                  }
+                ],
+                "set": {
+                  "inner-cos": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_CI_POLICE_500M",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 500,
+                    "units": "mbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "cos": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM-CI-L3-INT-PROTECT-10GBPS-IN"
+          },
+          {
+            "type": "qos",
+            "name": "Ingress-VOV-Edge",
+            "policy-map-rule": [
+              {
+                "class-name": "Edge-Platinum",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 5
+                }
+              },
+              {
+                "class-name": "Edge-Control",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 6
+                }
+              },
+              {
+                "class-name": "Edge-Signaling",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 2
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "set": {
+                  "mpls-experimental-imposition": 0
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_OUT_EVPN_ASSURED",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "set": {
+                  "cos": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM-IN-INTERFACE-10GE-METRO",
+            "policy-map-rule": [
+              {
+                "class-name": "CLASS1",
+                "class-type": "qos",
+                "set": {
+                  "cos": 2,
+                  "mpls-experimental-imposition": 2
+                }
+              },
+              {
+                "class-name": "CLASS2",
+                "class-type": "qos",
+                "set": {
+                  "cos": 2,
+                  "mpls-experimental-imposition": 2
+                }
+              },
+              {
+                "class-name": "CLASS3",
+                "class-type": "qos",
+                "set": {
+                  "cos": 3,
+                  "mpls-experimental-imposition": 3
+                }
+              },
+              {
+                "class-name": "CLASS4",
+                "class-type": "qos",
+                "set": {
+                  "cos": 5,
+                  "mpls-experimental-imposition": 5
+                }
+              },
+              {
+                "class-name": "CLASS5",
+                "class-type": "qos",
+                "set": {
+                  "cos": 5,
+                  "mpls-experimental-imposition": 5
+                }
+              },
+              {
+                "class-name": "CLASS6",
+                "class-type": "qos",
+                "set": {
+                  "cos": 5,
+                  "mpls-experimental-imposition": 5
+                }
+              },
+              {
+                "class-name": "CLASS7",
+                "class-type": "qos",
+                "set": {
+                  "cos": 7,
+                  "mpls-experimental-imposition": 7
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "set": {
+                  "cos": 0,
+                  "mpls-experimental-imposition": 0
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-Med-Edge-20Mb-Premium",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "shape": {
+                  "rate": {
+                    "value": 20000000,
+                    "unit": "bps"
+                  }
+                },
+                "bandwidth-remaining": {
+                  "value": 5,
+                  "unit": "ratio"
+                },
+                "service-policy": {
+                  "type": "qos",
+                  "policy-name": "Egress-RT-Med-Edge"
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "PM_IN_CI_POLICE_200M",
+            "policy-map-rule": [
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "police": {
+                  "rate": {
+                    "value": 200,
+                    "units": "mbps"
+                  },
+                  "exceed-action": {
+                    "drop": [
+                      null
+                    ]
+                  },
+                  "conform-action": {
+                    "set": {
+                      "mpls-experimental-imposition": 2
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "qos",
+            "name": "Egress-RT-High-Edge",
+            "policy-map-rule": [
+              {
+                "class-name": "Edge-Platinum",
+                "class-type": "qos",
+                "priority-level": 1,
+                "police": {
+                  "rate": {
+                    "value": 50,
+                    "units": "percent"
+                  }
+                }
+              },
+              {
+                "class-name": "Edge-Control",
+                "class-type": "qos",
+                "bandwidth-remaining": {
+                  "value": 2,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 64,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Gold",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 50,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Silver",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 20,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "Edge-Bronze",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "bandwidth-remaining": {
+                  "value": 10,
+                  "unit": "percent"
+                },
+                "queue-limit": {
+                  "value": 256,
+                  "unit": "packets"
+                }
+              },
+              {
+                "class-name": "class-default",
+                "class-type": "qos",
+                "default-red": [
+                  null
+                ],
+                "queue-limit": {
+                  "value": 512,
+                  "unit": "packets"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "class-maps": {
+        "class-map": [
+          {
+            "type": "qos",
+            "name": "JK",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "inner-cos": [
+                1
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS1",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                1
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS2",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                2
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS3",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                3
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS4",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                4
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS5",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                5
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS6",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                6
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CLASS7",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                7
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Premium",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                5,
+                7
+              ],
+              "dscp": [
+                "cs5",
+                "ef",
+                "cs7"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "COS2ONLY",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "cos": [
+                2
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Aggregate",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "dscp": [
+                "cs4",
+                "cs3",
+                "cs2",
+                "cs1",
+                "af41",
+                "af42",
+                "af31",
+                "af32",
+                "af33",
+                "af11",
+                "af12",
+                "af13"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Gold",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                3,
+                4
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Sync",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                7
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-NC1",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                6
+              ],
+              "precedence": [
+                "internet"
+              ],
+              "cos": [
+                6
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-NC2",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                7
+              ],
+              "precedence": [
+                "network"
+              ],
+              "cos": [
+                7
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NetControl",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                6
+              ],
+              "dscp": [
+                "cs6"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "tnf-backup",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "ipv4-acl": [
+                "tnf-backup"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Bronze",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                1
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Silver",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                2
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-Bulk",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                0
+              ],
+              "precedence": [
+                "routine"
+              ],
+              "cos": [
+                0
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-VoIP",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                5
+              ],
+              "precedence": [
+                "critical"
+              ],
+              "cos": [
+                5
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Core-Control",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                6
+              ],
+              "precedence": [
+                6
+              ],
+              "dscp": [
+                "cs6"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Control",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                6
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-Video",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                4
+              ],
+              "precedence": [
+                "flash-override"
+              ],
+              "cos": [
+                4
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Core-Business",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                4
+              ],
+              "dscp": [
+                "cs3",
+                "cs4",
+                "cs1"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Core-Platinum",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                5
+              ],
+              "dscp": [
+                "ef",
+                "cs5"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-CS7-test",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                7
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Platinum",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                5
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_MGMT_IN",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "inner-cos": [
+                6
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_SYNC_IN",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "inner-cos": [
+                7
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Edge-Signaling",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "precedence": [
+                2,
+                3
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "tnf-management",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "ipv4-acl": [
+                "tnf-management"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_GOLD_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "af31",
+                "af32",
+                "af33",
+                "cs3",
+                "af41",
+                "af42",
+                "af43",
+                "cs4"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_SYNC_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "cs7"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "Core-Signalling",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                2
+              ],
+              "dscp": [
+                "cs2"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "class_map_with_acl",
+            "class-map-mode-match-all": [
+              null
+            ],
+            "match": {
+              "inner-cos": [
+                6
+              ],
+              "ipv4-acl": [
+                "ACL_B2B_CI_CUST_PIN_IN_V4"
+              ],
+              "cos": [
+                5
+              ],
+              "dscp": [
+                "46"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-Scavenger",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                1
+              ],
+              "precedence": [
+                "priority"
+              ],
+              "cos": [
+                1
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_BRONZE_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "af11",
+                "af12",
+                "af13",
+                "cs1"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_PREMIUM_IN",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "inner-cos": [
+                5
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_SILVER_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "af21",
+                "af22",
+                "af23",
+                "cs2"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "NA4-IP-Signalling",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "mpls-experimental-topmost": [
+                3
+              ],
+              "precedence": [
+                "flash"
+              ],
+              "cos": [
+                3
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_PLATINUM_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "ef",
+                "cs5"
+              ]
+            }
+          },
+          {
+            "type": "qos",
+            "name": "CM_B2B_MANAGEMENT_OUT",
+            "class-map-mode-match-any": [
+              null
+            ],
+            "match": {
+              "dscp": [
+                "cs6"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Cisco-IOS-XR-ipv4-acl-cfg:ipv4-acl-and-prefix-list": {
+      "accesses": {
+        "access": [
+          {
+            "access-list-name": "ACL-CIA-ACCESS-IN",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "remark": "block unwanted traffic from Internet Access customers",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "remark": "-----------------------------------------",
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 25,
+                  "protocol": 112,
+                  "grant": "permit",
+                  "sequence-str": "25"
+                },
+                {
+                  "sequence-number": 30,
+                  "remark": "20110926 - rhuisman - initial setup",
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "source-network": {
+                    "source-address": "0.0.0.0",
+                    "source-wild-card-bits": "0.255.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "source-network": {
+                    "source-address": "127.0.0.0",
+                    "source-wild-card-bits": "0.255.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 70,
+                  "source-network": {
+                    "source-address": "172.16.0.0",
+                    "source-wild-card-bits": "0.15.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "70"
+                },
+                {
+                  "sequence-number": 80,
+                  "source-network": {
+                    "source-address": "169.254.0.0",
+                    "source-wild-card-bits": "0.0.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "80"
+                },
+                {
+                  "sequence-number": 90,
+                  "source-network": {
+                    "source-address": "192.0.2.0",
+                    "source-wild-card-bits": "0.0.0.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "90"
+                },
+                {
+                  "sequence-number": 100,
+                  "source-network": {
+                    "source-address": "192.168.0.0",
+                    "source-wild-card-bits": "0.0.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "100"
+                },
+                {
+                  "sequence-number": 110,
+                  "source-network": {
+                    "source-address": "224.0.0.0",
+                    "source-wild-card-bits": "31.255.255.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "110"
+                },
+                {
+                  "sequence-number": 120,
+                  "grant": "deny",
+                  "destination-network": {
+                    "destination-address": "0.0.0.0",
+                    "destination-wild-card-bits": "0.255.255.255"
+                  },
+                  "sequence-str": "120"
+                },
+                {
+                  "sequence-number": 130,
+                  "grant": "deny",
+                  "destination-network": {
+                    "destination-address": "127.0.0.0",
+                    "destination-wild-card-bits": "0.255.255.255"
+                  },
+                  "sequence-str": "130"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_B2B_SSM_RANGE",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "source-network": {
+                    "source-address": "239.0.0.0",
+                    "source-wild-card-bits": "0.255.255.255"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "10"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "IPVPN-CUSTOMER-IN",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": "tcp",
+                  "grant": "deny",
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "telnet"
+                  },
+                  "destination-network": {
+                    "destination-address": "217.105.0.0",
+                    "destination-wild-card-bits": "0.0.255.255"
+                  },
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "protocol": "tcp",
+                  "grant": "deny",
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 22
+                  },
+                  "destination-network": {
+                    "destination-address": "217.105.0.0",
+                    "destination-wild-card-bits": "0.0.255.255"
+                  },
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "grant": "permit",
+                  "sequence-str": "30"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL-B2B-CPE-ZTP-IN",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": "udp",
+                  "grant": "permit",
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": "boot-pc"
+                  },
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "boot-ps"
+                  },
+                  "sequence-str": "10"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL-B2B-CPE-ZTP-OUT",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": "udp",
+                  "grant": "permit",
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": "boot-ps"
+                  },
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "boot-pc"
+                  },
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "source-network": {
+                    "source-address": "172.22.160.115"
+                  },
+                  "protocol": "udp",
+                  "grant": "permit",
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "tftp"
+                  },
+                  "destination-network": {
+                    "destination-prefix-length": 28,
+                    "destination-address": "172.16.5.160"
+                  },
+                  "sequence-str": "20"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_B2B_CI_CUST_IN_V4",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": 112,
+                  "grant": "permit",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 12,
+                  "remark": "PERMIT_FOR_BGP",
+                  "sequence-str": "12"
+                },
+                {
+                  "sequence-number": 14,
+                  "protocol": "tcp",
+                  "grant": "permit",
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": "bgp"
+                  },
+                  "sequence-str": "14"
+                },
+                {
+                  "sequence-number": 15,
+                  "protocol": "tcp",
+                  "grant": "permit",
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "bgp"
+                  },
+                  "sequence-str": "15"
+                },
+                {
+                  "sequence-number": 16,
+                  "source-network": {
+                    "source-address": "10.111.111.0",
+                    "source-prefix-length": 29
+                  },
+                  "grant": "permit",
+                  "sequence-str": "16"
+                },
+                {
+                  "sequence-number": 17,
+                  "grant": "permit",
+                  "destination-network": {
+                    "destination-prefix-length": 29,
+                    "destination-address": "10.111.111.0"
+                  },
+                  "sequence-str": "17"
+                },
+                {
+                  "sequence-number": 20,
+                  "grant": "deny",
+                  "source-prefix-group": "OBJ_V4_MARTIANS",
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V4_MARTIANS",
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "source-network": {
+                    "source-address": "62.179.128.0",
+                    "source-wild-card-bits": "0.0.127.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V4_PIN_PROVIDERS",
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 60,
+                  "protocol": "ip",
+                  "grant": "deny",
+                  "sequence-str": "60"
+                },
+                {
+                  "sequence-number": 70,
+                  "grant": "permit",
+                  "sequence-str": "70"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_AS9143_MOBILE_IN_V4",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "remark": "Mobile SBC's TB and MND, Mobile from inside Mobile Core ranges & Static's for Diameter to Vodafone LEFT RED",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "grant": "deny",
+                  "source-prefix-group": "OBJ_V4_AS9143_MOBILE",
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V4_AS9143_MOBILE",
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "grant": "deny",
+                  "sequence-str": "40"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_B2B_CI_CUST_PIN_IN_V4",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": 112,
+                  "grant": "permit",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "grant": "deny",
+                  "source-prefix-group": "OBJ_V4_MARTIANS",
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V4_MARTIANS",
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "source-network": {
+                    "source-address": "62.179.128.0",
+                    "source-wild-card-bits": "0.0.127.255"
+                  },
+                  "grant": "deny",
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "protocol": "ip",
+                  "grant": "deny",
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 60,
+                  "grant": "permit",
+                  "sequence-str": "60"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_LDP_PEERS_SESSION_PROTECTION",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "source-network": {
+                    "source-address": "213.51.0.0",
+                    "source-prefix-length": 22
+                  },
+                  "grant": "permit",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "source-network": {
+                    "source-address": "172.22.145.0",
+                    "source-prefix-length": 24
+                  },
+                  "grant": "permit",
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "source-network": {
+                    "source-address": "172.22.32.0",
+                    "source-prefix-length": 20
+                  },
+                  "grant": "permit",
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "source-network": {
+                    "source-address": "80.112.192.0",
+                    "source-prefix-length": 24
+                  },
+                  "grant": "permit",
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "source-network": {
+                    "source-address": "172.22.144.0",
+                    "source-prefix-length": 24
+                  },
+                  "grant": "permit",
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 60,
+                  "source-network": {
+                    "source-address": "172.17.224.0",
+                    "source-prefix-length": 20
+                  },
+                  "grant": "permit",
+                  "sequence-str": "60"
+                },
+                {
+                  "sequence-number": 70,
+                  "source-network": {
+                    "source-address": "84.116.246.0",
+                    "source-prefix-length": 23
+                  },
+                  "grant": "permit",
+                  "sequence-str": "70"
+                },
+                {
+                  "sequence-number": 80,
+                  "source-network": {
+                    "source-address": "84.116.128.0",
+                    "source-wild-card-bits": "0.0.0.255"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "80"
+                },
+                {
+                  "sequence-number": 90,
+                  "source-network": {
+                    "source-address": "62.179.128.0",
+                    "source-wild-card-bits": "0.0.1.255"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "90"
+                }
+              ]
+            }
+          },
+          {
+            "access-list-name": "ACL_B2B_IPTV_VIDEO_GATEWAY_MGT_V4",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "protocol": "icmp",
+                  "grant": "permit",
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "protocol": "tcp",
+                  "grant": "permit",
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "bgp"
+                  },
+                  "destination-network": {
+                    "destination-address": "217.105.224.0",
+                    "destination-wild-card-bits": "0.0.31.255"
+                  },
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "protocol": "tcp",
+                  "grant": "permit",
+                  "tcp": {
+                    "tcp-bits": "rst ack"
+                  },
+                  "destination-network": {
+                    "destination-address": "217.105.224.0",
+                    "destination-wild-card-bits": "0.0.31.255"
+                  },
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "grant": "permit",
+                  "destination-network": {
+                    "destination-address": "198.18.1.0",
+                    "destination-wild-card-bits": "0.0.0.255"
+                  },
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "grant": "permit",
+                  "destination-network": {
+                    "destination-address": "198.18.2.0",
+                    "destination-wild-card-bits": "0.0.0.255"
+                  },
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 60,
+                  "grant": "permit",
+                  "destination-network": {
+                    "destination-address": "198.18.3.0",
+                    "destination-wild-card-bits": "0.0.0.255"
+                  },
+                  "sequence-str": "60"
+                },
+                {
+                  "sequence-number": 61,
+                  "grant": "permit",
+                  "destination-network": {
+                    "destination-address": "172.0.0.0",
+                    "destination-wild-card-bits": "0.255.255.255"
+                  },
+                  "sequence-str": "61"
+                },
+                {
+                  "sequence-number": 100,
+                  "grant": "deny",
+                  "log-option": "log",
+                  "sequence-str": "100"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Cisco-IOS-XR-ipv6-acl-cfg:ipv6-acl-and-prefix-list": {
+      "accesses": {
+        "access": [
+          {
+            "name": "ACL_B2B_CI_CUST_IN_V6",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 10,
+                  "grant": "deny",
+                  "header-flags": {
+                    "fragments": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 20,
+                  "grant": "deny",
+                  "header-flags": {
+                    "hop-by-hop": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 30,
+                  "grant": "deny",
+                  "header-flags": {
+                    "routing": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "30"
+                },
+                {
+                  "sequence-number": 40,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "sequence-str": "40"
+                },
+                {
+                  "sequence-number": 50,
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": "bgp"
+                  },
+                  "grant": "permit",
+                  "protocol": "tcp",
+                  "sequence-str": "50"
+                },
+                {
+                  "sequence-number": 60,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": "bgp"
+                  },
+                  "grant": "permit",
+                  "protocol": "tcp",
+                  "sequence-str": "60"
+                },
+                {
+                  "sequence-number": 70,
+                  "grant": "permit",
+                  "protocol": 112,
+                  "sequence-str": "70"
+                },
+                {
+                  "sequence-number": 80,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V6_DHCP_SERVERS",
+                  "sequence-str": "80"
+                },
+                {
+                  "sequence-number": 90,
+                  "source-prefix-group": "OBJ_V6_MARTIANS",
+                  "grant": "deny",
+                  "sequence-str": "90"
+                },
+                {
+                  "sequence-number": 100,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V6_MARTIANS",
+                  "sequence-str": "100"
+                },
+                {
+                  "sequence-number": 110,
+                  "grant": "deny",
+                  "destination-port-group": "OBJ_TCP_NETBIOS",
+                  "protocol": "tcp",
+                  "sequence-str": "110"
+                },
+                {
+                  "sequence-number": 120,
+                  "grant": "deny",
+                  "destination-port-group": "OBJ_UDP_NETBIOS",
+                  "protocol": "udp",
+                  "sequence-str": "120"
+                },
+                {
+                  "sequence-number": 130,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "udp",
+                  "sequence-str": "130"
+                },
+                {
+                  "sequence-number": 140,
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "udp",
+                  "sequence-str": "140"
+                },
+                {
+                  "sequence-number": 150,
+                  "source-port": {
+                    "source-operator": "equal",
+                    "first-source-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "tcp",
+                  "sequence-str": "150"
+                },
+                {
+                  "sequence-number": 160,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "tcp",
+                  "sequence-str": "160"
+                },
+                {
+                  "sequence-number": 170,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "sctp",
+                  "sequence-str": "170"
+                },
+                {
+                  "sequence-number": 180,
+                  "grant": "deny",
+                  "destination-prefix-group": "OBJ_V6_AS9143_INFRA",
+                  "sequence-str": "180"
+                },
+                {
+                  "sequence-number": 190,
+                  "grant": "permit",
+                  "sequence-str": "190"
+                }
+              ]
+            }
+          },
+          {
+            "name": "FF_INGRESS_B2B_CUST_V6",
+            "access-list-entries": {
+              "access-list-entry": [
+                {
+                  "sequence-number": 2,
+                  "destination-network": {
+                    "destination-address": "ff02::",
+                    "destination-wild-card-bits": 16
+                  },
+                  "grant": "permit",
+                  "sequence-str": "2",
+                  "protocol": 112,
+                  "source-network": {
+                    "source-address": "fe80::",
+                    "source-wild-card-bits": 16
+                  }
+                },
+                {
+                  "sequence-number": 4,
+                  "destination-network": {
+                    "destination-address": "ff02::",
+                    "destination-wild-card-bits": 16
+                  },
+                  "grant": "permit",
+                  "sequence-str": "4",
+                  "protocol": 112,
+                  "source-network": {
+                    "source-address": "fe80::",
+                    "source-wild-card-bits": 16
+                  }
+                },
+                {
+                  "sequence-number": 5,
+                  "destination-network": {
+                    "destination-address": "2001:b88::",
+                    "destination-wild-card-bits": 48
+                  },
+                  "grant": "permit",
+                  "sequence-str": "5",
+                  "protocol": 112,
+                  "source-network": {
+                    "source-address": "2001:b88::",
+                    "source-wild-card-bits": 48
+                  }
+                },
+                {
+                  "sequence-number": 6,
+                  "destination-network": {
+                    "destination-address": "2001:b88::",
+                    "destination-wild-card-bits": 48
+                  },
+                  "grant": "permit",
+                  "sequence-str": "6",
+                  "protocol": 112,
+                  "source-network": {
+                    "source-address": "fe80::",
+                    "source-wild-card-bits": 16
+                  }
+                },
+                {
+                  "sequence-number": 8,
+                  "destination-network": {
+                    "destination-address": "2001:b88::",
+                    "destination-wild-card-bits": 48
+                  },
+                  "grant": "permit",
+                  "sequence-str": "8",
+                  "protocol": 112,
+                  "source-network": {
+                    "source-address": "fe80::",
+                    "source-wild-card-bits": 16
+                  }
+                },
+                {
+                  "sequence-number": 10,
+                  "grant": "deny",
+                  "header-flags": {
+                    "fragments": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "10"
+                },
+                {
+                  "sequence-number": 14,
+                  "grant": "deny",
+                  "header-flags": {
+                    "fragments": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "14"
+                },
+                {
+                  "sequence-number": 20,
+                  "grant": "deny",
+                  "header-flags": {
+                    "hop-by-hop": [
+                      null
+                    ]
+                  },
+                  "sequence-str": "20"
+                },
+                {
+                  "sequence-number": 29,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "sequence-str": "29"
+                },
+                {
+                  "sequence-number": 30,
+                  "destination-network": {
+                    "destination-address": "ff02::1:ff00:0",
+                    "destination-wild-card-bits": 104
+                  },
+                  "grant": "permit",
+                  "sequence-str": "30",
+                  "protocol": "icmpv6",
+                  "icmp": {
+                    "icmp-type-code": "neighbor-solicitation"
+                  }
+                },
+                {
+                  "sequence-number": 40,
+                  "destination-network": {
+                    "destination-address": "ff02::1"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "40",
+                  "protocol": "icmpv6",
+                  "source-network": {
+                    "source-address": "::"
+                  },
+                  "icmp": {
+                    "icmp-type-code": "neighbor-solicitation"
+                  }
+                },
+                {
+                  "sequence-number": 50,
+                  "destination-network": {
+                    "destination-address": "ff02::1"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "50",
+                  "protocol": "icmpv6",
+                  "source-network": {
+                    "source-address": "ff02::1"
+                  },
+                  "icmp": {
+                    "icmp-type-code": "neighbor-solicitation"
+                  }
+                },
+                {
+                  "sequence-number": 55,
+                  "destination-network": {
+                    "destination-address": "ff02::1"
+                  },
+                  "grant": "permit",
+                  "sequence-str": "55",
+                  "protocol": "icmpv6",
+                  "source-network": {
+                    "source-address": "ff02::1"
+                  },
+                  "icmp": {
+                    "icmp-type-code": "neighbor-advertisement"
+                  }
+                },
+                {
+                  "sequence-number": 60,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "icmp": {
+                    "icmp-type-code": "echo"
+                  },
+                  "sequence-str": "60"
+                },
+                {
+                  "sequence-number": 61,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "icmp": {
+                    "icmp-type-code": "echo-reply"
+                  },
+                  "sequence-str": "61"
+                },
+                {
+                  "sequence-number": 62,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "icmp": {
+                    "icmp-type-code": "packet-too-big"
+                  },
+                  "sequence-str": "62"
+                },
+                {
+                  "sequence-number": 63,
+                  "grant": "permit",
+                  "protocol": "icmpv6",
+                  "icmp": {
+                    "icmp-type-code": "time-exceeded"
+                  },
+                  "sequence-str": "63"
+                },
+                {
+                  "sequence-number": 70,
+                  "source-prefix-group": "PL_DHCP_SERVERS_V6",
+                  "grant": "deny",
+                  "sequence-str": "70"
+                },
+                {
+                  "sequence-number": 80,
+                  "source-prefix-group": "PL_MARTIANS_V6",
+                  "grant": "deny",
+                  "sequence-str": "80"
+                },
+                {
+                  "sequence-number": 90,
+                  "destination-network": {
+                    "destination-address": "2001:1c00::",
+                    "destination-wild-card-bits": 23
+                  },
+                  "grant": "deny",
+                  "sequence-str": "90",
+                  "destination-port-group": "DROP_NETBIOS_TO_RESIDENTIAL_UDP",
+                  "protocol": "udp"
+                },
+                {
+                  "sequence-number": 91,
+                  "destination-network": {
+                    "destination-address": "2001:1c00::",
+                    "destination-wild-card-bits": 23
+                  },
+                  "grant": "deny",
+                  "sequence-str": "91",
+                  "destination-port-group": "DROP_NETBIOS_TO_RESIDENTIAL_TCP",
+                  "protocol": "tcp"
+                },
+                {
+                  "sequence-number": 100,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "udp",
+                  "sequence-str": "100"
+                },
+                {
+                  "sequence-number": 101,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "tcp",
+                  "sequence-str": "101"
+                },
+                {
+                  "sequence-number": 102,
+                  "destination-port": {
+                    "destination-operator": "equal",
+                    "first-destination-port": 0
+                  },
+                  "grant": "deny",
+                  "protocol": "sctp",
+                  "sequence-str": "102"
+                },
+                {
+                  "sequence-number": 110,
+                  "grant": "deny",
+                  "destination-prefix-group": "PL_AS9143_INFRA_BACKBONE_V6",
+                  "sequence-str": "110"
+                },
+                {
+                  "sequence-number": 200,
+                  "grant": "permit",
+                  "sequence-str": "200"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
