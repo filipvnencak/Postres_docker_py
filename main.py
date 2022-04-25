@@ -13,13 +13,15 @@ with open('demo_data.json') as f:
 #print(json.dumps(data, sort_keys=True, indent=4))
 
 cur = conn.cursor()
-cur.execute( "CREATE TABLE  demo ("
-             "data json); ")
+cur.execute( "CREATE TABLE test (id serial PRIMARY KEY, num integer, data varchar);")
 
 
-for item in req:
-    data = {field: item[field] for field in req}
-    cur.execute("INSERT INTO my_demo VALUES (%s)", (json.dumps(data),))
+
+cur.close()
+conn.close()
+
+
+
 
 
 
