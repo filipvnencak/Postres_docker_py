@@ -21,6 +21,5 @@ for x in data:
     list.append(x)
 # print(type(list))
 
-array = json.dumps(list)
 
 # print(type(array))
