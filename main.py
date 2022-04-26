@@ -14,9 +14,6 @@ cur = connection.cursor()
 
 cur.execute("CREATE TABLE IF NOT EXISTS data (type TEXT, name TEXT, policy TEXT);")
 
-# for item in json_parse.array:
-#     my_data = {field: item[field] for field in json_parse.array}
-#     cur.execute("INSERT INTO data VALUES ")
 
 for d in data:
     cur.execute("""INSERT INTO data (type, name, policy)  VALUES (%(type)s, %(name)s, %(policy-map-rule)s)""", d)
