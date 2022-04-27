@@ -6,7 +6,7 @@ data=json_parse.list
 
 connection = psycopg2.connect(  user="postgres",
                                 password="docker",
-                                host="127.0.0.1",
+                                host="0.0.0.0",
                                 port="5432",
                                 database="postgres")
 
